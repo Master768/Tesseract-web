@@ -1,4 +1,9 @@
 import React from 'react';
+import event1 from '../assets/events/Event 2.jpeg';
+import event2 from '../assets/events/event 5.jpeg';
+import event3 from '../assets/events/Event 3.jpeg';
+import event4 from '../assets/events/event 4.jpeg';
+import event5 from '../assets/events/WhatsApp Image 2026-03-02 at 20.39.44.jpeg';
 
 const eventsList = [
     {
@@ -6,7 +11,7 @@ const eventsList = [
         title: "Data Treasure Hunt",
         type: "Technical Event",
         theme: "The Analytics Challenge",
-        poster: "/events/Event 2.jpeg",
+        poster: event1,
         link: "https://docs.google.com/forms/d/e/1FAIpQLSchSvFaGPe7TLKyXdQnHtQvZKxDgAw8heU0qSbAgCMwr3NSzw/viewform",
         points: [
             "Crack data. Unlock clues. Win the hunt.",
@@ -20,7 +25,7 @@ const eventsList = [
         title: "Query of Death",
         type: "Technical Event",
         theme: "Debugging a Murder",
-        poster: "/events/event 5.jpeg",
+        poster: event2,
         link: "https://docs.google.com/forms/d/e/1FAIpQLSdSmH5uIgPPI9d0IpJdd8NdbdHOBRFrGPWykM4Ij8rvwNtV8w/viewform",
         points: [
             "Debug the crime. Decode the killer.",
@@ -34,7 +39,7 @@ const eventsList = [
         title: "Decode or Conscience?",
         type: "Technical Event",
         theme: "AI vs Human Code Detection",
-        poster: "/events/Event 3.jpeg",
+        poster: event3,
         link: "https://docs.google.com/forms/d/e/1FAIpQLSeYTtaDs967BUotBgqDXUdUNcpr7FeI9BclscxvFeT8Y6WfsA/viewform",
         points: [
             "Spot the code. Human or AI?",
@@ -50,7 +55,7 @@ const eventsList = [
         title: "Football Transfer Window",
         type: "Non-Technical",
         theme: "Build your squad. Win the market.",
-        poster: "/events/event 4.jpeg",
+        poster: event4,
         link: "https://docs.google.com/forms/d/e/1FAIpQLSe0hIcfLeqoIcGPIkiZO6V5cfU85g8nNAgFjAdWMBBeDRLHMw/viewform",
         points: [
             "Bid smart. Manage better. Dominate.",
@@ -65,7 +70,7 @@ const eventsList = [
         title: "The Final Spike",
         type: "Non-Technical",
         theme: "A Valorant Tournament",
-        poster: "/events/WhatsApp Image 2026-03-02 at 20.39.44.jpeg",
+        poster: event5,
         link: "https://siva-py.github.io/The-final-spike-event-website/",
         points: [
             "Aim sharp. Play smart. Win big.",

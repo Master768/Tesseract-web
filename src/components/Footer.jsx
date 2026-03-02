@@ -1,5 +1,6 @@
 import React from 'react';
-import { Hexagon, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import tesseractLogo from '../assets/logos/tesseract-cube.png';
 
 const Footer = () => {
     return (
@@ -8,8 +9,8 @@ const Footer = () => {
 
                 {/* Brand */}
                 <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-2 mb-2">
-                        <Hexagon className="w-8 h-8 text-neon" />
+                    <div className="flex items-center gap-3 mb-2">
+                        <img src={tesseractLogo} alt="Tesseract Cube" className="w-12 h-12 object-contain filter drop-shadow-[0_0_15px_rgba(0,229,255,0.6)] animate-pulse-slow" />
                         <span className="text-2xl font-bold tracking-wider text-white">
                             TESSERACT<span className="text-primaryLight">.</span>
                         </span>
