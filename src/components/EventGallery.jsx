@@ -64,22 +64,6 @@ const eventsList = [
             "Strategy. Budget. Victory."
         ],
         coordinators: "Raghunandan, Kishore",
-    },
-    {
-        id: 5,
-        title: "The Final Spike",
-        type: "Non-Technical",
-        theme: "A Valorant Tournament",
-        poster: event5,
-        link: "https://siva-py.github.io/The-final-spike-event-website/",
-        points: [
-            "Aim sharp. Play smart. Win big.",
-            "Clutch the spike. Dominate the game.",
-            "Precision wins. Strategy conquers.",
-            "One team. One spike. One champion.",
-            "Lock in. Execute. Victory."
-        ],
-        coordinators: "Siva, Bhagawadh",
     }
 ];
 
