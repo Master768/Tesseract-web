@@ -31,11 +31,7 @@ const Navbar = () => {
 
                     {/* VIT Chennai Logo placed inline with the navigation */}
                     <div className="h-10 border-l border-white/20 mx-2"></div>
-                    <img src={vitLogo} alt="VIT Chennai" className="h-10 object-contain rounded-md" />
-
-                    <a href="#events" className="px-6 py-2 bg-primary/20 hover:bg-primary/40 border border-primary/50 text-white rounded-full font-medium transition-all shadow-[0_0_15px_rgba(26,95,255,0.3)] hover:shadow-[0_0_25px_rgba(0,229,255,0.5)]">
-                        Explore Events
-                    </a>
+                    <img src={vitLogo} alt="VIT Chennai" className="h-12 object-contain mix-blend-screen opacity-90 hover:opacity-100 transition-opacity drop-shadow-md" />
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -49,12 +45,10 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-surface/95 backdrop-blur-lg border-b border-white/10 py-4 px-6 flex flex-col gap-4 shadow-2xl">
-                    <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white py-2 font-medium">ABOUT</a>
-                    <a href="#events" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white py-2 font-medium">EVENTS</a>
-                    <a href="#events" onClick={() => setMobileMenuOpen(false)} className="w-full text-center py-3 bg-primary/20 border border-primary/50 text-white rounded-lg font-medium mt-2">
-                        Explore Events
-                    </a>
+                <div className="md:hidden absolute top-full left-0 w-full bg-surface/95 backdrop-blur-lg border-b border-white/10 py-6 px-6 flex flex-col items-center gap-6 shadow-2xl">
+                    <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white font-medium text-lg tracking-wide border-b border-white/10 pb-2 w-full text-center">ABOUT</a>
+                    <a href="#events" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white font-medium text-lg tracking-wide border-b border-white/10 pb-2 w-full text-center">EVENTS</a>
+                    <img src={vitLogo} alt="VIT Chennai" className="h-16 mt-2 object-contain mix-blend-screen opacity-90" />
                 </div>
             )}
         </nav>

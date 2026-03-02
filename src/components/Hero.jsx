@@ -18,7 +18,7 @@ const Hero = () => {
 
                 <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-medium">
                     Organised by the Department of Mathematics, School of Advanced Sciences.
-                    A National Level Technical Symposium aimed at fostering innovation, collaboration, and practical learning.
+                    A flagship data science fest aimed at fostering innovation, collaboration, and practical learning.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
