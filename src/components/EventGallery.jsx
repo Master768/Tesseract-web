@@ -18,7 +18,10 @@ const eventsList = [
             "Analyze smart. Think fast. Advance rounds.",
             "Turn data into decisions under pressure."
         ],
-        coordinators: "Mithuna Malini, Yugadarrshini",
+        coordinators: [
+            "Mithuna Malini. V - 7550213130",
+            "Yugadarrshini. S - 9940300514"
+        ],
     },
     {
         id: 4,
@@ -32,7 +35,10 @@ const eventsList = [
             "Every clue is in the code—find it.",
             "Analyze data. Unmask the murderer."
         ],
-        coordinators: "Catherine, Melvin",
+        coordinators: [
+            "Catherine Shiny - 999420536",
+            "Melvin Immanuel - 9043916443"
+        ],
     },
     {
         id: 2,
@@ -48,7 +54,10 @@ const eventsList = [
             "Not all code is human.",
             "Catch the machine logic."
         ],
-        coordinators: "Priyanga, Shaurya",
+        coordinators: [
+            "Priyanga B - 8304917545",
+            "Shaurya Malhotra - 8218717845"
+        ],
     },
     {
         id: 3,
@@ -63,7 +72,10 @@ const eventsList = [
             "Think like a manager. Act like a champion.",
             "Strategy. Budget. Victory."
         ],
-        coordinators: "Raghunandan, Kishore",
+        coordinators: [
+            "Raghunandhan M - 6383237038",
+            "Kishore R - 8939555961"
+        ],
     },
     {
         id: 5,
@@ -79,7 +91,10 @@ const eventsList = [
             "One team. One spike. One champion.",
             "Lock in. Execute. Victory."
         ],
-        coordinators: "Siva, Bhagawadh",
+        coordinators: [
+            "Siva DM - 9092220192",
+            "Bhagavadh B - 7200861538"
+        ],
     }
 ];
 
@@ -92,7 +107,7 @@ const EventGallery = () => {
                         FEATURED <span className="text-neon">EVENTS</span>
                     </h2>
                     <p className="text-gray-400 font-mono border-l-2 border-primary pl-4 inline-block mx-auto max-w-2xl text-left">
-                        SCAN the QR Code on the respective event posters to register. Dive into the competition.
+                        Click the Register button below to participate in the respective events. Dive into the competition.
                     </p>
                 </div>
 
@@ -129,7 +144,11 @@ const EventGallery = () => {
                                 <div className="mt-auto border-t border-white/10 pt-4 flex items-center justify-between">
                                     <div className="flex flex-col gap-1 text-xs text-gray-500">
                                         <span className="font-semibold text-gray-400 uppercase tracking-widest text-[10px]">Coordinators</span>
-                                        <span className="font-mono text-gray-300">{event.coordinators}</span>
+                                        <div className="font-mono text-gray-300 flex flex-col text-[11px] sm:text-xs">
+                                            {event.coordinators.map((c, i) => (
+                                                <span key={i}>{c}</span>
+                                            ))}
+                                        </div>
                                     </div>
                                     <a href={event.link} target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-primary hover:bg-primaryLight text-white rounded-lg text-sm font-bold transition-all shadow-[0_0_15px_rgba(26,95,255,0.3)] hover:shadow-[0_0_25px_rgba(0,229,255,0.5)] transform hover:-translate-y-0.5">
                                         Register
