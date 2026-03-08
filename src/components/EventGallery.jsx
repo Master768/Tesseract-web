@@ -103,7 +103,7 @@ const eventsList = [
 
 const EventGallery = () => {
     return (
-        <section id="events" className="py-12 px-6 relative z-10 bg-transparent">
+        <section id="events" className="py-4 px-6 relative z-10 bg-transparent">
             {/* Ambient Background Glows */}
             <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-neonPink/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -114,7 +114,7 @@ const EventGallery = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-20"
+                    className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                         FEATURED <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-primaryLight drop-shadow-[0_0_20px_relative(0,229,255,0.4)]">EVENTS</span>

@@ -106,7 +106,7 @@ const Hero = () => {
             </motion.div>
 
             {/* About Section Below Hero */}
-            <div id="about-sections" className="container mx-auto max-w-7xl z-10 grid grid-cols-1 md:grid-cols-3 gap-8 pb-32">
+            <div id="about-sections" className="container mx-auto max-w-7xl z-10 grid grid-cols-1 md:grid-cols-3 gap-8 pb-12">
                 {[
                     {
                         icon: <Building2 className="w-7 h-7" />,
