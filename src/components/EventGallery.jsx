@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Instagram } from 'lucide-react';
 import event1 from '../assets/events/data tressure hunt.jpeg';
 import event2 from '../assets/events/Query of death.jpeg';
 import event3 from '../assets/events/code or sonscience.jpeg';
@@ -240,6 +241,31 @@ const EventGallery = () => {
                         </div>
                     </motion.div>
 
+                </motion.div>
+
+                {/* Socials Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    className="mt-24 pt-12 border-t border-white/10 flex flex-col items-center justify-center gap-8 text-center"
+                >
+                    <h3 className="text-2xl font-bold text-white tracking-widest drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
+                        STAY <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]">CONNECTED</span>
+                    </h3>
+                    <motion.a
+                        whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(253,29,29,0.4)" }}
+                        whileTap={{ scale: 0.95 }}
+                        href="https://www.instagram.com/teserractvit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 px-8 py-4 bg-black/40 backdrop-blur-md rounded-2xl text-white font-bold tracking-wider border border-white/10 hover:border-transparent relative overflow-hidden group"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+                        <Instagram className="w-6 h-6 relative z-10 text-pink-500 group-hover:text-white transition-colors duration-500" />
+                        <span className="relative z-10 group-hover:text-white transition-colors duration-500">@teserractvit</span>
+                    </motion.a>
+                    <p className="text-gray-400 text-sm font-mono max-w-md">Follow our official Instagram page for the latest updates, event schedules, and behind-the-scenes moments.</p>
                 </motion.div>
             </div>
         </section>
