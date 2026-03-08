@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import event1 from '../assets/events/Event 2.jpeg';
-import event2 from '../assets/events/event 5.jpeg';
-import event3 from '../assets/events/Event 3.jpeg';
-import event4 from '../assets/events/event 4.jpeg';
-import event5 from '../assets/events/WhatsApp Image 2026-03-02 at 20.39.44.jpeg';
+import event1 from '../assets/events/data tressure hunt.jpeg';
+import event2 from '../assets/events/Query of death.jpeg';
+import event3 from '../assets/events/code or sonscience.jpeg';
+import event4 from '../assets/events/football.jpeg';
+import event5 from '../assets/events/Volrarent.jpeg';
+import workshopImage from '../assets/events/Quantum computing workshop.jpeg';
 
 const eventsList = [
     {
@@ -221,11 +222,10 @@ const EventGallery = () => {
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#FFD700]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div className="p-10 flex flex-col flex-1 justify-center items-center text-center h-full relative z-10">
                             <motion.div
-                                animate={{ rotate: [0, 5, -5, 0] }}
-                                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                                className="w-20 h-20 rounded-2xl bg-[#FFD700]/10 border border-[#FFD700]/30 text-[#FFD700] flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(255,215,0,0.2)] group-hover:shadow-[0_0_40px_rgba(255,215,0,0.4)] transition-shadow"
+                                whileHover={{ scale: 1.05 }}
+                                className="w-full max-w-[260px] aspect-[4/5] rounded-2xl border border-[#FFD700]/40 shadow-[0_0_30px_rgba(255,215,0,0.3)] group-hover:shadow-[0_0_50px_rgba(255,215,0,0.5)] transition-all duration-500 overflow-hidden mb-8 mx-auto bg-black/50"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                <img src={workshopImage} alt="Quantum Computing Workshop" className="w-full h-full object-cover" />
                             </motion.div>
                             <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Special Session</h3>
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">WORKSHOP</h2>
