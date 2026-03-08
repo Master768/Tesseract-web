@@ -10,9 +10,9 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="bg-black/40 backdrop-blur-xl border-t border-white/10 pt-20 pb-8 px-6 mt-20 relative z-10"
+            className="bg-black/40 backdrop-blur-xl border-t border-white/10 pt-12 pb-8 px-6 mt-12 relative z-10"
         >
-            <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+            <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-16 mb-8">
 
                 {/* Brand */}
                 <div className="flex flex-col gap-6">

@@ -9,11 +9,11 @@ const HomeGallerySlideshow = () => {
     const slideshowImages = [...galleryData, ...galleryData, ...galleryData];
 
     return (
-        <section id="gallery-preview" className="py-24 relative z-10 bg-transparent overflow-hidden">
+        <section id="gallery-preview" className="py-12 relative z-10 bg-transparent overflow-hidden">
             {/* Ambient Background Glows */}
             <div className="absolute top-1/2 left-0 w-96 h-96 bg-neon/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-            <div className="container mx-auto max-w-7xl px-6 mb-12 flex flex-col md:flex-row items-end justify-between gap-6 relative z-10">
+            <div className="container mx-auto max-w-7xl px-6 mb-8 flex flex-col md:flex-row items-end justify-between gap-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}

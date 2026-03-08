@@ -103,7 +103,7 @@ const eventsList = [
 
 const EventGallery = () => {
     return (
-        <section id="events" className="py-24 px-6 relative z-10 bg-transparent">
+        <section id="events" className="py-12 px-6 relative z-10 bg-transparent">
             {/* Ambient Background Glows */}
             <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-neonPink/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -248,7 +248,7 @@ const EventGallery = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    className="mt-24 pt-12 border-t border-white/10 flex flex-col items-center justify-center gap-8 text-center"
+                    className="mt-12 pt-8 border-t border-white/10 flex flex-col items-center justify-center gap-8 text-center"
                 >
                     <h3 className="text-2xl font-bold text-white tracking-widest drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
                         STAY <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]">CONNECTED</span>
