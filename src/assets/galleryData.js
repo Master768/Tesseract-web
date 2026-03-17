@@ -4,7 +4,6 @@ import img3 from './gallery/IMG_0905.JPG';
 import img4 from './gallery/IMG_0912.JPG';
 import img5 from './gallery/IMG_0974.JPG';
 import img6 from './gallery/IMG_0976.JPG';
-import img7 from './gallery/IMG_0977.JPG';
 import img8 from './gallery/IMG_1023.JPG';
 import img9 from './gallery/IMG_1061.JPG';
 import img10 from './gallery/IMG_1157.JPG';
@@ -25,7 +24,6 @@ const galleryData = [
     { id: 4, src: img4, type: 'image' },
     { id: 5, src: img5, type: 'image' },
     { id: 6, src: img6, type: 'image' },
-    { id: 7, src: img7, type: 'image' },
     { id: 8, src: img8, type: 'image' },
     { id: 9, src: img9, type: 'image' },
     { id: 10, src: img10, type: 'image' },

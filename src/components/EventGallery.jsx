@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
-import event1 from '../assets/events/data tressure hunt.jpeg';
-import event2 from '../assets/events/Query of death.jpeg';
-import event3 from '../assets/events/code or sonscience.jpeg';
-import event4 from '../assets/events/football.jpeg';
-import event5 from '../assets/events/Volrarent.jpeg';
-import workshopImage from '../assets/events/Quantum computing workshop.jpeg';
+import event1 from '../assets/events/data treasue hunt.jpeg';
+import event2 from '../assets/events/query of death.jpeg';
+import event3 from '../assets/events/ideathon.jpeg';
+import event4 from '../assets/events/foot ball transfer window.jpeg';
+import event5 from '../assets/events/volarant.jpeg';
+import workshopImage from '../assets/events/workshop(cloud computing).jpeg';
 
 const eventsList = [
     {
@@ -45,17 +45,17 @@ const eventsList = [
     },
     {
         id: 2,
-        title: "Decode or Conscience?",
+        title: "Ideathon",
         type: "Technical Event",
-        theme: "AI vs Human Code Detection",
+        theme: "Innovate. Build. Transform.",
         poster: event3,
         link: "https://docs.google.com/forms/d/e/1FAIpQLSeYTtaDs967BUotBgqDXUdUNcpr7FeI9BclscxvFeT8Y6WfsA/viewform",
         points: [
-            "Spot the code. Human or AI?",
-            "Perfect code lies. Find why.",
-            "Think deeper. Detect smarter.",
-            "Not all code is human.",
-            "Catch the machine logic."
+            "Brainstorm innovative ideas.",
+            "Build prototypes within the deadline.",
+            "Pitch your solutions to experts.",
+            "Collaborate to create impact.",
+            "Code your way to the top."
         ],
         coordinators: [
             "Priyanga B - 8304917545",
@@ -68,7 +68,7 @@ const eventsList = [
         type: "Non-Technical",
         theme: "Build your squad. Win the market.",
         poster: event4,
-        link: "https://docs.google.com/forms/d/e/1FAIpQLSe0hIcfLeqoIcGPIkiZO6V5cfU85g8nNAgFjAdWMBBeDRLHMw/viewform",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLScvCvKkfU5EXiWkjPvhM7RKvPAeML8dshalhUa-tK5oo97EVw/viewform",
         points: [
             "Bid smart. Manage better. Dominate.",
             "From quiz to transfers—rule the game.",
@@ -160,7 +160,7 @@ const EventGallery = () => {
                                 <img
                                     src={event.poster}
                                     alt={event.title}
-                                    className="w-full h-full object-cover filter drop-shadow-2xl"
+                                    className="w-full h-full object-contain bg-[#080d1a]/30 filter drop-shadow-2xl"
                                 />
                                 <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md border border-white/20 text-xs font-bold px-4 py-1.5 rounded-full text-white shadow-lg">
                                     {event.type}
@@ -226,18 +226,28 @@ const EventGallery = () => {
                                 whileHover={{ scale: 1.05 }}
                                 className="w-full max-w-[260px] aspect-[4/5] rounded-2xl border border-[#FFD700]/40 shadow-[0_0_30px_rgba(255,215,0,0.3)] group-hover:shadow-[0_0_50px_rgba(255,215,0,0.5)] transition-all duration-500 overflow-hidden mb-8 mx-auto bg-black/50"
                             >
-                                <img src={workshopImage} alt="Quantum Computing Workshop" className="w-full h-full object-cover" />
+                                <img src={workshopImage} alt="Quantum Computing Workshop" className="w-full h-full object-contain bg-[#080d1a]/30" />
                             </motion.div>
                             <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Special Session</h3>
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">WORKSHOP</h2>
                             <div className="bg-black/40 backdrop-blur-sm border border-[#FFD700]/20 rounded-xl p-4 w-full">
                                 <p className="text-[#FFD700] text-lg md:text-xl font-mono tracking-wider drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">
-                                    QUANTUM COMPUTING
+                                    CLOUD COMPUTING
                                 </p>
                             </div>
-                            <p className="text-sm text-gray-400 mt-8 leading-relaxed">
+                            <p className="text-sm text-gray-400 mt-8 mb-6 leading-relaxed">
                                 Join this exclusive workshop to dive into the future of computation, algorithms, and cryptography.
                             </p>
+                            <motion.a
+                                whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(255,215,0,0.6)" }}
+                                whileTap={{ scale: 0.95 }}
+                                href="https://eventhubcc.vit.ac.in/EventHub/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-2.5 bg-[#FFD700] hover:bg-[#FFEA00] text-black rounded-xl text-sm font-bold transition-all shadow-[0_0_15px_rgba(255,215,0,0.4)]"
+                            >
+                                Register
+                            </motion.a>
                         </div>
                     </motion.div>
 
