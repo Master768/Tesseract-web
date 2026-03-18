@@ -9,6 +9,26 @@ const TesseractShape = () => {
     const outerCubeRef = useRef();
     const linesRef = useRef();
 
+    const { baseOuterCorners, baseInnerCorners } = useMemo(() => {
+        const getCorners = (size) => [
+            new THREE.Vector3(size, size, size),
+            new THREE.Vector3(size, size, -size),
+            new THREE.Vector3(size, -size, size),
+            new THREE.Vector3(size, -size, -size),
+            new THREE.Vector3(-size, size, size),
+            new THREE.Vector3(-size, size, -size),
+            new THREE.Vector3(-size, -size, size),
+            new THREE.Vector3(-size, -size, -size),
+        ];
+        return { baseOuterCorners: getCorners(2), baseInnerCorners: getCorners(1) };
+    }, []);
+
+    const edgeIndices = useMemo(() => [
+        0, 1, 1, 3, 3, 2, 2, 0, // right face
+        4, 5, 5, 7, 7, 6, 6, 4, // left face
+        0, 4, 1, 5, 2, 6, 3, 7  // connecting faces
+    ], []);
+
     useFrame((state, delta) => {
         if (groupRef.current) {
             groupRef.current.rotation.y += delta * 0.2;
@@ -22,49 +42,68 @@ const TesseractShape = () => {
             // Pulsate inner cube
             const scale = 1 + Math.sin(state.clock.elapsedTime * 2) * 0.1;
             innerCubeRef.current.scale.set(scale, scale, scale);
+            innerCubeRef.current.updateMatrix();
+        }
+
+        if (linesRef.current && innerCubeRef.current) {
+            const positions = linesRef.current.geometry.attributes.position.array;
+            
+            // Transform inner corners
+            const transformedInner = baseInnerCorners.map(corner => 
+                corner.clone().applyMatrix4(innerCubeRef.current.matrix)
+            );
+            
+            let posIndex = 0;
+            
+            // 8 connecting lines
+            for (let i = 0; i < 8; i++) {
+                positions[posIndex++] = baseOuterCorners[i].x;
+                positions[posIndex++] = baseOuterCorners[i].y;
+                positions[posIndex++] = baseOuterCorners[i].z;
+                
+                positions[posIndex++] = transformedInner[i].x;
+                positions[posIndex++] = transformedInner[i].y;
+                positions[posIndex++] = transformedInner[i].z;
+            }
+
+            for (let i = 0; i < edgeIndices.length; i += 2) {
+                // outer cube edge
+                positions[posIndex++] = baseOuterCorners[edgeIndices[i]].x;
+                positions[posIndex++] = baseOuterCorners[edgeIndices[i]].y;
+                positions[posIndex++] = baseOuterCorners[edgeIndices[i]].z;
+                
+                positions[posIndex++] = baseOuterCorners[edgeIndices[i+1]].x;
+                positions[posIndex++] = baseOuterCorners[edgeIndices[i+1]].y;
+                positions[posIndex++] = baseOuterCorners[edgeIndices[i+1]].z;
+                
+                // inner cube edge
+                positions[posIndex++] = transformedInner[edgeIndices[i]].x;
+                positions[posIndex++] = transformedInner[edgeIndices[i]].y;
+                positions[posIndex++] = transformedInner[edgeIndices[i]].z;
+                
+                positions[posIndex++] = transformedInner[edgeIndices[i+1]].x;
+                positions[posIndex++] = transformedInner[edgeIndices[i+1]].y;
+                positions[posIndex++] = transformedInner[edgeIndices[i+1]].z;
+            }
+            
+            linesRef.current.geometry.attributes.position.needsUpdate = true;
         }
     });
 
     // Create lines connecting the inner and outer cube
     const linesGeometry = useMemo(() => {
-        const outerSize = 2;
-        const innerSize = 1;
-
-        // Corners of a cube centered at origin
-        const getCorners = (size) => [
-            new THREE.Vector3(size, size, size),
-            new THREE.Vector3(size, size, -size),
-            new THREE.Vector3(size, -size, size),
-            new THREE.Vector3(size, -size, -size),
-            new THREE.Vector3(-size, size, size),
-            new THREE.Vector3(-size, size, -size),
-            new THREE.Vector3(-size, -size, size),
-            new THREE.Vector3(-size, -size, -size),
-        ];
-
-        const outerCorners = getCorners(outerSize);
-        const innerCorners = getCorners(innerSize);
-
         const points = [];
         for (let i = 0; i < 8; i++) {
-            points.push(outerCorners[i], innerCorners[i]);
+            points.push(baseOuterCorners[i], baseInnerCorners[i]);
         }
-
-        // Also add lines for the cubes themselves to ensure they're visible
-        const edgeIndices = [
-            0, 1, 1, 3, 3, 2, 2, 0, // right face
-            4, 5, 5, 7, 7, 6, 6, 4, // left face
-            0, 4, 1, 5, 2, 6, 3, 7  // connecting faces
-        ];
 
         for (let i = 0; i < edgeIndices.length; i += 2) {
-            points.push(outerCorners[edgeIndices[i]], outerCorners[edgeIndices[i + 1]]);
-            points.push(innerCorners[edgeIndices[i]], innerCorners[edgeIndices[i + 1]]);
+            points.push(baseOuterCorners[edgeIndices[i]], baseOuterCorners[edgeIndices[i + 1]]);
+            points.push(baseInnerCorners[edgeIndices[i]], baseInnerCorners[edgeIndices[i + 1]]);
         }
 
-        const geometry = new THREE.BufferGeometry().setFromPoints(points);
-        return geometry;
-    }, []);
+        return new THREE.BufferGeometry().setFromPoints(points);
+    }, [baseOuterCorners, baseInnerCorners, edgeIndices]);
 
     return (
         <group ref={groupRef} scale={2}>
