@@ -232,7 +232,7 @@ const EventGallery = () => {
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">WORKSHOP</h2>
                             <div className="bg-black/40 backdrop-blur-sm border border-[#FFD700]/20 rounded-xl p-4 w-full">
                                 <p className="text-[#FFD700] text-lg md:text-xl font-mono tracking-wider drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">
-                                    CLOUD COMPUTING
+                                    QUANTUN COMPUTING
                                 </p>
                             </div>
                             <p className="text-sm text-gray-400 mt-8 mb-6 leading-relaxed">
