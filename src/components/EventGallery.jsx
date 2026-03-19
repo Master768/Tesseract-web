@@ -6,7 +6,7 @@ import event2 from '../assets/events/query of death.jpeg';
 import event3 from '../assets/events/ideathon.jpeg';
 import event4 from '../assets/events/foot ball transfer window.jpeg';
 import event5 from '../assets/events/volarant.jpeg';
-import workshopImage from '../assets/events/workshop(cloud computing).jpeg';
+import workshopImage from '../assets/events/Workshop (Quantum Computing).png';
 
 const eventsList = [
     {
@@ -236,7 +236,7 @@ const EventGallery = () => {
                                 </p>
                             </div>
                             <p className="text-sm text-gray-400 mt-8 mb-6 leading-relaxed">
-                                Join this exclusive workshop to dive into the future of computation, algorithms, and cryptography.
+                                Join this exclusive workshop to dive into the future of computation.
                             </p>
                             <motion.a
                                 whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(255,215,0,0.6)" }}
