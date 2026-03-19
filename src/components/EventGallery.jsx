@@ -224,7 +224,7 @@ const EventGallery = () => {
                         <div className="p-10 flex flex-col flex-1 justify-center items-center text-center h-full relative z-10">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="w-full max-w-[260px] aspect-[4/5] rounded-2xl border border-[#FFD700]/40 shadow-[0_0_30px_rgba(255,215,0,0.3)] group-hover:shadow-[0_0_50px_rgba(255,215,0,0.5)] transition-all duration-500 overflow-hidden mb-8 mx-auto bg-black/50"
+                                className="w-full max-w-[340px] aspect-[4/5] rounded-2xl border border-[#FFD700]/40 shadow-[0_0_30px_rgba(255,215,0,0.3)] group-hover:shadow-[0_0_50px_rgba(255,215,0,0.5)] transition-all duration-500 overflow-hidden mb-8 mx-auto bg-black/50"
                             >
                                 <img src={workshopImage} alt="Quantum Computing Workshop" className="w-full h-full object-contain bg-[#080d1a]/30" />
                             </motion.div>
